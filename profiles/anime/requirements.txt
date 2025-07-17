@@ -1,0 +1,2 @@
+# Anime pack requirements
+# No explicit requirements - dependencies are managed by the extensions themselves 

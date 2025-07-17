@@ -1,0 +1,2 @@
+# Base pack requirements
+# No explicit requirements - core dependencies are managed by ComfyUI itself 

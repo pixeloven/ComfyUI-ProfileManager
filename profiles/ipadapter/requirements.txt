@@ -1,0 +1,5 @@
+# IPAdapter pack requirements
+# Only includes explicit external dependencies not managed by ComfyUI or extensions
+
+# Required by ComfyUI_IPAdapter_plus for face analysis features
+insightface>=0.7.3 

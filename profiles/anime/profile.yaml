@@ -1,0 +1,80 @@
+name: "anime"
+version: "1.0.0"
+description: "Anime-focused models and extensions for manga-style generation"
+extends: ["base"]
+tags: ["anime", "manga", "illustration", "anything-v3"]
+comfyui_version: "v0.3.43"
+requirements:
+  python: ">=3.10"
+  gpu: ">=6GB"
+  storage: ">=30GB"
+author: "ComfyUI-Docker Team"
+license: "MIT"
+created: "2024-01-01"
+updated: "2024-01-01"
+
+# Model definitions
+models:
+  - name: "anything-v3"
+    url: "https://huggingface.co/Linaqruf/anything-v3.0/resolve/main/anything-v3.0.safetensors"
+    type: "checkpoint"
+    paths: ["models/checkpoints"]
+    hash: "sha256:abc123def456789..."
+    size: "4.27GB"
+    pack: "anime"
+    priority: 1
+    
+  - name: "counterfeit-v3"
+    url: "https://huggingface.co/gsdf/Counterfeit-V3.0/resolve/main/Counterfeit-V3.0_fp16.safetensors"
+    type: "checkpoint"
+    paths: ["models/checkpoints"]
+    hash: "sha256:def456abc789..."
+    size: "4.27GB"
+    pack: "anime"
+    priority: 2
+    
+  - name: "orange-mix"
+    url: "https://huggingface.co/WarriorMama777/OrangeMixs/resolve/main/AbyssOrangeMix3.safetensors"
+    type: "checkpoint"
+    paths: ["models/checkpoints"]
+    hash: "sha256:ghi789def012..."
+    size: "4.27GB"
+    pack: "anime"
+    priority: 3
+    
+  - name: "waifu-diffusion"
+    url: "https://huggingface.co/hakurei/waifu-diffusion/resolve/main/wd-1-5-beta3.safetensors"
+    type: "checkpoint"
+    paths: ["models/checkpoints"]
+    hash: "sha256:jkl012ghi345..."
+    size: "4.27GB"
+    pack: "anime"
+    priority: 4
+
+# Extension definitions
+extensions:
+  git:
+    - name: "ComfyUI-AnimateDiff-Evolved"
+      url: "https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved"
+      branch: "main"
+      hash: "latest"
+      pack: "anime"
+      priority: 1
+      
+    - name: "ComfyUI-Impact-Pack"
+      url: "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+      branch: "main"
+      hash: "latest"
+      pack: "anime"
+      priority: 2
+      
+    - name: "ComfyUI-Advanced-ControlNet"
+      url: "https://github.com/Fannovel16/comfyui_controlnet_aux"
+      branch: "main"
+      hash: "latest"
+      pack: "anime"
+      priority: 3
+      
+  pip:
+    # No explicit pip requirements for anime pack
+    # Dependencies are managed by the extensions themselves 

@@ -1,0 +1,87 @@
+name: "professional"
+version: "1.0.0"
+description: "Professional-grade models and extensions for commercial use"
+extends: ["base"]
+tags: ["professional", "commercial", "high-quality", "enterprise"]
+comfyui_version: "v0.3.43"
+requirements:
+  python: ">=3.10"
+  gpu: ">=12GB"
+  storage: ">=50GB"
+author: "ComfyUI-Docker Team"
+license: "MIT"
+created: "2024-01-01"
+updated: "2024-01-01"
+
+# Model definitions
+models:
+  - name: "realistic-vision-v5"
+    url: "https://huggingface.co/SG161222/Realistic_Vision_V5.1_noVAE/resolve/main/Realistic_Vision_V5.1_noVAE.safetensors"
+    type: "checkpoint"
+    paths: ["models/checkpoints"]
+    hash: "sha256:jkl012ghi345..."
+    size: "4.27GB"
+    pack: "professional"
+    priority: 1
+    
+  - name: "deliberate-v3"
+    url: "https://huggingface.co/XpucT/Deliberate/resolve/main/Deliberate_v3.safetensors"
+    type: "checkpoint"
+    paths: ["models/checkpoints"]
+    hash: "sha256:mno345jkl678..."
+    size: "4.27GB"
+    pack: "professional"
+    priority: 2
+    
+  - name: "dreamshaper-v8"
+    url: "https://huggingface.co/Lykon/dreamshaper/resolve/main/dreamshaper_8.safetensors"
+    type: "checkpoint"
+    paths: ["models/checkpoints"]
+    hash: "sha256:pqr678mno901..."
+    size: "4.27GB"
+    pack: "professional"
+    priority: 3
+    
+  - name: "real-esrgan-x4plus"
+    url: "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth"
+    type: "upscale"
+    paths: ["models/upscale_models"]
+    hash: "sha256:stu901pqr234..."
+    size: "64MB"
+    pack: "professional"
+    priority: 1
+
+# Extension definitions
+extensions:
+  git:
+    - name: "ComfyUI-Advanced-ControlNet"
+      url: "https://github.com/Fannovel16/comfyui_controlnet_aux"
+      branch: "main"
+      hash: "latest"
+      pack: "professional"
+      priority: 1
+      
+    - name: "ComfyUI-Impact-Pack"
+      url: "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+      branch: "main"
+      hash: "latest"
+      pack: "professional"
+      priority: 2
+      
+    - name: "ComfyUI-Ultimate-SD-Upscale"
+      url: "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
+      branch: "main"
+      hash: "latest"
+      pack: "professional"
+      priority: 3
+      
+    - name: "ComfyUI-Image-Grid"
+      url: "https://github.com/LEv145/images-grid-comfy-plugin"
+      branch: "main"
+      hash: "latest"
+      pack: "professional"
+      priority: 4
+      
+  pip:
+    # No explicit pip requirements for professional pack
+    # Dependencies are managed by the extensions themselves 

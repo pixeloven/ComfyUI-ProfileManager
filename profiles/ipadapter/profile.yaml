@@ -1,0 +1,159 @@
+name: "ipadapter"
+version: "1.0.0"
+description: "IPAdapter pack with all supported models and proper external dependency management"
+extends: ["base"]
+tags: ["ipadapter", "face", "control", "insightface"]
+comfyui_version: "v0.3.43"
+requirements:
+  python: ">=3.10"
+  gpu: ">=6GB"
+  storage: ">=25GB"
+author: "ComfyUI-Docker Team"
+license: "MIT"
+created: "2024-01-01"
+updated: "2024-01-01"
+
+# Model definitions (from https://huggingface.co/h94/IP-Adapter/tree/main/models)
+models:
+  # SD 1.5 Models
+  - name: "ip-adapter_sd15"
+    url: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter_sd15.safetensors"
+    type: "ipadapter"
+    paths: ["models/ipadapter"]
+    pack: "ipadapter"
+    priority: 1
+  - name: "ip-adapter-plus_sd15"
+    url: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus_sd15.safetensors"
+    type: "ipadapter"
+    paths: ["models/ipadapter"]
+    pack: "ipadapter"
+    priority: 2
+  - name: "ip-adapter-plus-face_sd15"
+    url: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-face_sd15.safetensors"
+    type: "ipadapter"
+    paths: ["models/ipadapter"]
+    pack: "ipadapter"
+    priority: 3
+  - name: "ip-adapter-plus-faceid_sd15"
+    url: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-faceid_sd15.safetensors"
+    type: "ipadapter"
+    paths: ["models/ipadapter"]
+    pack: "ipadapter"
+    priority: 4
+  - name: "ip-adapter-plus-faceid_sd15.bin"
+    url: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-faceid_sd15.bin"
+    type: "ipadapter-bin"
+    paths: ["models/ipadapter"]
+    pack: "ipadapter"
+    priority: 5
+  - name: "ip-adapter-plus-cartoon_sd15"
+    url: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-cartoon_sd15.safetensors"
+    type: "ipadapter"
+    paths: ["models/ipadapter"]
+    pack: "ipadapter"
+    priority: 6
+  - name: "ip-adapter-plus-openpose_sd15"
+    url: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-openpose_sd15.safetensors"
+    type: "ipadapter"
+    paths: ["models/ipadapter"]
+    pack: "ipadapter"
+    priority: 7
+  - name: "ip-adapter-plus-seg_sd15"
+    url: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-seg_sd15.safetensors"
+    type: "ipadapter"
+    paths: ["models/ipadapter"]
+    pack: "ipadapter"
+    priority: 8
+  - name: "ip-adapter-plus-style_sd15"
+    url: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-style_sd15.safetensors"
+    type: "ipadapter"
+    paths: ["models/ipadapter"]
+    pack: "ipadapter"
+    priority: 9
+  - name: "ip-adapter-faceid-clip_sd15.bin"
+    url: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-faceid-clip_sd15.bin"
+    type: "ipadapter-bin"
+    paths: ["models/ipadapter"]
+    pack: "ipadapter"
+    priority: 10
+
+  # SDXL Models
+  - name: "ip-adapter_sdxl"
+    url: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter_sdxl.safetensors"
+    type: "ipadapter"
+    paths: ["models/ipadapter"]
+    pack: "ipadapter"
+    priority: 11
+  - name: "ip-adapter-plus_sdxl"
+    url: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus_sdxl.safetensors"
+    type: "ipadapter"
+    paths: ["models/ipadapter"]
+    pack: "ipadapter"
+    priority: 12
+  - name: "ip-adapter-plus-face_sdxl_vit-h"
+    url: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-face_sdxl_vit-h.safetensors"
+    type: "ipadapter"
+    paths: ["models/ipadapter"]
+    pack: "ipadapter"
+    priority: 13
+  - name: "ip-adapter-plus-faceid_sdxl"
+    url: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-faceid_sdxl.safetensors"
+    type: "ipadapter"
+    paths: ["models/ipadapter"]
+    pack: "ipadapter"
+    priority: 14
+  - name: "ip-adapter-plus-faceid_sdxl.bin"
+    url: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-faceid_sdxl.bin"
+    type: "ipadapter-bin"
+    paths: ["models/ipadapter"]
+    pack: "ipadapter"
+    priority: 15
+  - name: "ip-adapter-plus-cartoon_sdxl"
+    url: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-cartoon_sdxl.safetensors"
+    type: "ipadapter"
+    paths: ["models/ipadapter"]
+    pack: "ipadapter"
+    priority: 16
+  - name: "ip-adapter-plus-openpose_sdxl"
+    url: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-openpose_sdxl.safetensors"
+    type: "ipadapter"
+    paths: ["models/ipadapter"]
+    pack: "ipadapter"
+    priority: 17
+  - name: "ip-adapter-plus-seg_sdxl"
+    url: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-seg_sdxl.safetensors"
+    type: "ipadapter"
+    paths: ["models/ipadapter"]
+    pack: "ipadapter"
+    priority: 18
+  - name: "ip-adapter-plus-style_sdxl"
+    url: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-style_sdxl.safetensors"
+    type: "ipadapter"
+    paths: ["models/ipadapter"]
+    pack: "ipadapter"
+    priority: 19
+  - name: "ip-adapter-faceid-clip_sdxl.bin"
+    url: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-faceid-clip_sdxl.bin"
+    type: "ipadapter-bin"
+    paths: ["models/ipadapter"]
+    pack: "ipadapter"
+    priority: 20
+
+# Extension definitions
+extensions:
+  git:
+    - name: "ComfyUI_IPAdapter_plus"
+      url: "https://github.com/cubiq/ComfyUI_IPAdapter_plus"
+      branch: "main"
+      hash: "latest"
+      pack: "ipadapter"
+      priority: 1
+      
+  pip:
+    # Explicit external dependency required by IPAdapter extension
+    # insightface is not managed by ComfyUI or the extension itself
+    - name: "insightface"
+      version: ">=0.7.3"
+      pack: "ipadapter"
+      priority: 1
+      reason: "Required by ComfyUI_IPAdapter_plus for face analysis features" 

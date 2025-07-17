@@ -1,0 +1,16 @@
+[project]
+name = "comfyui_pack_manager"
+description = "A web-based interface for managing ComfyUI packs with React/TypeScript frontend"
+version = "0.1.0"
+license = {file = "LICENSE"}
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/your-username/ComfyUI-PackManager"
+
+# Used by Comfy Registry https://comfyregistry.org
+[tool.comfy]
+PublisherId = "pack_manager" # Change this to your actual publisher ID
+DisplayName = "ComfyUI Pack Manager"
+Icon = ""
+includes = ["dist/"]
